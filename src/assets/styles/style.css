@@ -1,0 +1,11 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
