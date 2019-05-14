@@ -1,39 +1,16 @@
 <template>
   <Layout>
-    <ul>
-      <li v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
-        <router-link :to="node.path">
-          <h2 v-html="node.title"/>
-          <g-image :src="node.image"/>
-          <div class="text-grey-200 mb-5" v-html="node.date"/>
-          <div class="text-black" v-html="node.description"/>
-        </router-link>
-      </li>
-    </ul>
+    <div>
+      This is the home page
+    </div>
+    <g-link to="/blog">Blog</g-link>
   </Layout>
 </template>
-
-<page-query>
-  query Home ($page: Int) {
-    allBlogPost (page: $page) {
-      edges {
-        node {
-          _id
-          title
-          date (format: "D MMMM, YYYY")
-          description
-          path
-          image
-        }
-      }
-    }
-  }
-</page-query>
 
 <script>
 export default {
   metaInfo: {
-    title: "Hello, world!"
+    title: "Spencer Wallace"
   }
 };
 </script>

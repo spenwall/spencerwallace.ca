@@ -6,6 +6,15 @@ img {
   width: 100%;
 }
 
+a {
+  color: #35495e;
+}
+
+a:hover {
+  color: #42b883;
+}
+
 ul {
   list-style-type: none;
+  padding: 0;
 }
