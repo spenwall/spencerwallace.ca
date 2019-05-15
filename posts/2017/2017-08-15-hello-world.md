@@ -2,7 +2,7 @@
 title: Hello World - Where I started
 date: 2017-08-15 16:00:00
 description: 'Since I was a kid I have always loved computers. I remember my first computer that had a big 4GB hard drive. We had a 28.8kbps modem and doubled our speeds to 56.6 not long after. It was amazing what you could do with it.'
-image: "./images/world.jpg"
+image: "../images/world.jpg"
 slug: hello-world
 ---
 

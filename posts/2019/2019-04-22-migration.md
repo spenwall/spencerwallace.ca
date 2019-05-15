@@ -2,7 +2,7 @@
 title: Lessons Learned From a Major Migration
 date: 2019-04-22 14:00:00
 description: "At work we are working on a fairly old codebase. I think the current iteration of the site started back in 2006. So in the web world this is getting pretty old. It is also built on zend framework 1 which at the time was the new hotness for php frameworks."
-image: "./images/birds.jpg"
+image: "../images/birds.jpg"
 slug: migration
 ---
 
