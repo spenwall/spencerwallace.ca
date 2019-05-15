@@ -15,8 +15,17 @@
     <div class="max-w-2xl mx-auto py-5 min-h-screen">
       <slot/>
     </div>
-    <footer class="bg-blue-500 h-20">
-
+    <footer class="bg-blue-500 h-20 flex justify-end items-center">
+      <a class="m-2" href="https://twitter.com/spenwall" target="_blank">
+        <div class="text-white">
+          <twitter />
+        </div>
+      </a>
+      <a class="m-2" href="https://github.com/spenwall" target="_blank">
+        <div class="text-white">
+          <github />
+        </div>  
+      </a>
     </footer>
   </div>
 </template>
@@ -28,6 +37,19 @@ query {
   }
 }
 </static-query>
+
+<script>
+import twitter from '~/assets/images/twitter'
+import github from '~/assets/images/github.vue'
+
+export default {
+  components: {
+    twitter,
+    github
+  }
+}
+</script>
+
 
 <style>
 body {
@@ -41,5 +63,4 @@ body {
 a {
   text-decoration: none;
 }
-
 </style>
