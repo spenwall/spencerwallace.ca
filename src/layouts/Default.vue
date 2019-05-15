@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bg-green-500 mb-2 h-20">
-      <header class="max-w-2xl mx-auto flex justify-between items-center h-full">
+      <header class="max-w-3xl mx-auto flex justify-between items-center h-full">
         <strong>
           <g-link class="ml-5 text-white hover:text-blue-500" to="/">{{ $static.metaData.siteName }}</g-link>
         </strong>
@@ -12,7 +12,7 @@
         </nav>
       </header>
     </div>
-    <div class="max-w-2xl mx-auto py-5 min-h-screen">
+    <div class="max-w-3xl mx-auto py-5 min-h-screen">
       <slot/>
     </div>
     <footer class="bg-blue-500 h-20 flex justify-end items-center">
@@ -53,11 +53,15 @@ export default {
 
 <style>
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.7;
+}
+
+p, h1, h2, h3 {
+  opacity: .75;
 }
 
 a {

@@ -1,7 +1,7 @@
 <template>
   <Layout>
       <ul>
-        <li class="shadow p-2 mb-5" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
+        <li class="shadow p-6 mb-5" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
           <router-link :to="node.path">
             <h2 v-html="node.title"/>
             <g-image :src="node.image"/>
