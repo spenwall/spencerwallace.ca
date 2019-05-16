@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>About us</h1>
+    <h1>About Me</h1>
     <p>
       I am a full stack developer that loves to make great web things. I work with PHP, Javascript, HTML, and CSS.
       I am here to help others become better developers as I do the same. When I am not writing code I am making delicious 

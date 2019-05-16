@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-img {
-  width: 100%;
-}
-
 a {
   color: #35495e;
 }
