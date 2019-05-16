@@ -3,7 +3,13 @@
     <div class="bg-green-500 mb-2 h-20">
       <header class="max-w-3xl mx-auto flex justify-between items-center h-full">
         <div class="flex items-center ml-2">
-          <g-image class="rounded-full" src="~/assets/images/spencer.jpg" alt="Spencer" width="40" height="40"></g-image>
+          <g-image
+            class="rounded-full"
+            src="~/assets/images/spencer.jpg"
+            alt="Spencer"
+            width="40"
+            height="40"
+          ></g-image>
           <strong>
             <g-link
               class="ml-2 text-white hover:text-blue-500"
@@ -17,9 +23,11 @@
         </nav>
       </header>
     </div>
-    <div class="max-w-3xl mx-auto p-5 min-h-screen">
-      <slot/>
-    </div>
+    <transition name="fade" appear>
+      <div class="max-w-3xl mx-auto p-5 min-h-screen">
+        <slot/>
+      </div>
+    </transition>
     <footer class="bg-blue-500 h-20 flex justify-end items-center">
       <a class="m-2" href="https://twitter.com/spenwall" target="_blank">
         <div class="text-white">
@@ -57,6 +65,14 @@ export default {
 
 
 <style>
+.fade-enter-active {
+  transition: opacity .5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
