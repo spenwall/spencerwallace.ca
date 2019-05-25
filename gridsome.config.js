@@ -12,7 +12,10 @@ module.exports = {
       options: {
         path: 'posts/**/*.md',
         typeName: 'BlogPost',
-        route: '/blog/:slug'
+        route: '/blog/:slug',
+        plugins: [
+          '@gridsome/remark-prismjs'
+        ]
       }
     },
     {
@@ -24,5 +27,13 @@ module.exports = {
         id: 'UA-140380361-1'
       }
     }
-  ]
+  ],
+
+  transformers: {
+    remark: {
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  }
 }

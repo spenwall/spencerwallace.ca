@@ -3,6 +3,7 @@
 
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/styles/style.css'
+import 'prism-themes/themes/prism-atom-dark.css'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
