@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-blue-500 mb-2 h-20">
+    <div class="bg-green-500 mb-2 h-20">
       <header class="max-w-3xl mx-auto flex justify-between items-center h-full">
         <div class="flex items-center ml-2">
           <g-image

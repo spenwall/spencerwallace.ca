@@ -10,7 +10,12 @@
 </template>
 
 <script>
+import Layout from '~/layouts/Blog.vue'
+
 export default {
+  components: {
+    Layout
+  },
   metaInfo () {
     return {
       title: this.$page.blogPost.title

@@ -31,7 +31,12 @@
 </page-query>
 
 <script>
+import Layout from '~/layouts/Blog.vue'
+
 export default {
+  components: {
+    Layout
+  },
   metaInfo: {
     title: "Hello, world!"
   }
