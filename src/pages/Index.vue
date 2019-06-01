@@ -5,12 +5,16 @@
         <li class="shadow-lg mb-5" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
           <router-link :to="node.path">
             <h2 class="p-6" v-html="node.title"/>
+          </router-link>
+          <router-link :to="node.path">
             <g-image :src="node.image"/>
+          </router-link>
             <div class="p-6">
               <div class="text-grey-200 mb-5" v-html="node.date"/>
+            <router-link :to="node.path">
               <div class="text-black" v-html="node.description"/>
+            </router-link>
             </div>
-          </router-link>
         </li>
       </ul>
       <Pager

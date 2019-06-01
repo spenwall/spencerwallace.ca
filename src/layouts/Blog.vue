@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="bg-green-500 mb-2 h-20">
+    <div class="bg-vue-green mb-2 h-20">
       <header class="max-w-3xl mx-auto flex justify-between items-center h-full">
         <div class="flex items-center ml-2">
           <g-image
@@ -12,14 +12,14 @@
           ></g-image>
           <strong>
             <g-link
-              class="ml-2 text-white hover:text-blue-500"
+              class="ml-2 text-white hover:text-vue-blue"
               to="/"
             >{{ $static.metaData.siteName }}</g-link>
           </strong>
         </div>
         <nav class="nav">
-          <g-link class="text-white hover:text-blue-500 mr-5" to="/">Home</g-link>
-          <g-link class="text-white hover:text-blue-500 mr-5" to="/about">About</g-link>
+          <g-link class="text-white hover:text-vue-blue mr-5" to="/">Home</g-link>
+          <g-link class="text-white hover:text-vue-blue mr-5" to="/about">About</g-link>
         </nav>
       </header>
     </div>
@@ -28,7 +28,7 @@
         <slot/>
       </div>
     </transition>
-    <footer class="bg-blue-500 h-20 flex justify-end items-center">
+    <footer class="bg-vue-blue h-20 flex justify-end items-center">
       <a class="m-2" href="https://twitter.com/spenwall" target="_blank">
         <div class="text-white">
           <twitter/>
