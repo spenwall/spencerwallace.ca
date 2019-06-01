@@ -1,21 +1,16 @@
 module.exports = {
   theme: {
-    extend: {},
-    colors: {
-      green: {
-        '300': '#A0DBC1',
-        '500':'#42b883',
-        '700': '#276E4E',
-      },
-      blue: {
-        '300': '#717F8E',
-        '500': '#35495e',
-        '700': '#253341',
-      },
-      white: '#fff',
-      black: '#000',
-    },
+    extend: {
+      colors: {
+          'vue-green': '#42b883',
+          'vue-blue': '#35495e',
+          'vue-grey': '#7f939d',
+          'plum': '#60406D',
+          'red': '#D13E4D',
+          'yellow': '#EDDD68',
+      }
+    }
   },
   variants: {},
   plugins: []
-}
+};
