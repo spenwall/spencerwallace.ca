@@ -1,3 +1,12 @@
+const purgecss = require('@fullhuman/postcss-purgecss')
+const tailwind = require('tailwindcss')
+
+const postcssPlugins = [
+  tailwind('./tailwind.config.js'),
+]
+
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+
 module.exports = {
   siteName: 'Spencer Wallace',
   plugins: [
@@ -13,9 +22,6 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-plugin-tailwindcss'
-    },
-    {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-140380361-1'
@@ -28,5 +34,12 @@ module.exports = {
         '@gridsome/remark-prismjs'
       ]
     }
-  }
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
+      },
+    },
+  },
 }
