@@ -1,31 +1,13 @@
 <template>
   <Layout>
     <div>
-      <ul>
-        <li class="shadow-lg mb-5" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
-          <router-link :to="node.path">
-            <h2 class="p-6" v-html="node.title"/>
-          </router-link>
-          <router-link :to="node.path">
-            <g-image :src="node.image"/>
-          </router-link>
-            <div class="p-6">
-              <div class="text-grey-200 mb-5" v-html="node.date"/>
-            <router-link :to="node.path">
-              <div class="text-black" v-html="node.description"/>
-            </router-link>
-            </div>
-        </li>
-      </ul>
-      <Pager
-        class="flex justify-between"
-        :info="$page.allBlogPost.pageInfo"
-        prevLabel="< Newer Posts"
-        nextLabel="Older Posts >"
-        firstLabel=""
-        lastLabel=""
-        range=" "
-      />
+      <About />
+      <Projects />
+      <Experience />
+      <Skills />
+      <Education />
+      <Contact />
+      <Resume />
     </div>
   </Layout>
 </template>
@@ -52,11 +34,25 @@
 </page-query>
 
 <script>
-import { Pager } from "gridsome";
+import { Pager } from "gridsome"
+import About from "~/components/section/About.vue"
+import Projects from "~/components/section/Projects.vue"
+import Experience from "~/components/section/Experience.vue"
+import Skills from "~/components/section/Skills.vue"
+import Education from "~/components/section/Education.vue"
+import Contact from "~/components/section/Contact.vue"
+import Resume from "~/components/section/Resume.vue"
 
 export default {
   components: {
-    Pager
+    Pager,
+    About,
+    Projects,
+    Experience,
+    Skills,
+    Education,
+    Contact,
+    Resume,
   },
   metaInfo: {
     title: "Hello, world!"

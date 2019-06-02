@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
-    <slideout/>
-    <div class="ml-48 p-1">
+    <slideout v-if="show"/>
+    <div class="ml-48 w-full">
       <slot/>
     </div>
   </div>
@@ -13,8 +13,13 @@ import slideout from "~/components/Slideout.vue";
 export default {
   components: {
     slideout
+  },
+  data: function() {
+    return {
+      show: true
+    }
   }
-};
+}
 </script>
 
 
