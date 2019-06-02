@@ -8,43 +8,43 @@
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'user']"/>
         </div>
-        <a href="#">About</a>
+        <a href="#About">About</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
-        <a href="#">Projects</a>
+        <a href="#Projects">Projects</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>
         </div>
-        <a href="#">Experience</a>
+        <a href="#Experience">Experience</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-plum text-xl" :icon="['fas', 'pencil-ruler']"/>
         </div>
-        <a href="#">Skills</a>
+        <a href="#Skills">Skills</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-red text-xl" :icon="['fas', 'graduation-cap']"/>
         </div>
-        <a href="#">Education</a>
+        <a href="#Education">Education</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'address-card']"/>
         </div>
-        <a href="#">Contact</a>
+        <a href="#Contact">Contact</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'file-alt']"/>
         </div>
-        <a href="#">Resume</a>
+        <a href="#Resume">Resume</a>
       </li>
     </ul>
   </div>

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="h-16 bg-vue-blue flex items-center pl-4 text-white">{{ title }}</div>
+  <div :id="title">
+    <div class="h-20 bg-vue-blue flex items-center pl-4 text-2xl text-white">{{ title }}</div>
     <div class="p-8">
       <slot/>
     </div>
