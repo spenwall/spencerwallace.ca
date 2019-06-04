@@ -1,16 +1,29 @@
 <template>
   <Layout>
-    <div class="h-screen">
-
+    <div class="h-screen flex justify-center items-center">
+      <div>
+        <transition name="fade">
+          <div
+            v-if="loaded"
+            class="text-6xl text-vue-blue flex justify-center leading-tight"
+          >Spencer Wallace</div>
+        </transition>
+        <transition name="up">
+          <div
+            v-if="loaded"
+            class="text-5xl text-vue-green flex justify-center leading-tight"
+          >Full Stack Developer</div>
+        </transition>
+      </div>
     </div>
     <div>
-      <About />
-      <Projects />
-      <Experience />
-      <Skills />
-      <Education />
-      <Contact />
-      <Resume />
+      <About/>
+      <Projects/>
+      <Experience/>
+      <Skills/>
+      <Education/>
+      <Contact/>
+      <Resume/>
     </div>
   </Layout>
 </template>
@@ -37,14 +50,14 @@
 </page-query>
 
 <script>
-import { Pager } from "gridsome"
-import About from "~/components/section/About.vue"
-import Projects from "~/components/section/Projects.vue"
-import Experience from "~/components/section/Experience.vue"
-import Skills from "~/components/section/Skills.vue"
-import Education from "~/components/section/Education.vue"
-import Contact from "~/components/section/Contact.vue"
-import Resume from "~/components/section/Resume.vue"
+import { Pager } from "gridsome";
+import About from "~/components/section/About.vue";
+import Projects from "~/components/section/Projects.vue";
+import Experience from "~/components/section/Experience.vue";
+import Skills from "~/components/section/Skills.vue";
+import Education from "~/components/section/Education.vue";
+import Contact from "~/components/section/Contact.vue";
+import Resume from "~/components/section/Resume.vue";
 
 export default {
   components: {
@@ -55,7 +68,21 @@ export default {
     Skills,
     Education,
     Contact,
-    Resume,
+    Resume
+  },
+  methods: {
+    onLoaded() {
+      this.loaded = true;
+      console.log("hello");
+    }
+  },
+  mounted: function() {
+    this.onLoaded();
+  },
+  data: function() {
+    return {
+      loaded: false
+    };
   },
   metaInfo: {
     title: "Hello, world!"
@@ -63,7 +90,27 @@ export default {
 };
 </script>
 
+
+
 <style <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s, transform 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.up-enter-active {
+  transition: 1.5s;
+}
+
+.up-enter {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
 img {
   width: 100%;
 }
