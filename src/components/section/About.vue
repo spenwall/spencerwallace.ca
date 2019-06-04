@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="About">
+    <Section title="About" color="vue-green">
       <div>
         This is about me
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="Education">
+    <Section title="Education" color="red">
       This is my Education
     </Section>
   </div>

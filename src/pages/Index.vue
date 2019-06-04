@@ -73,7 +73,6 @@ export default {
   methods: {
     onLoaded() {
       this.loaded = true;
-      console.log("hello");
     }
   },
   mounted: function() {
@@ -92,7 +91,7 @@ export default {
 
 
 
-<style <style scoped>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s, transform 1s;
@@ -103,7 +102,7 @@ export default {
 }
 
 .up-enter-active {
-  transition: 1.5s;
+  transition: 1.2s;
 }
 
 .up-enter {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="Contact">
+    <Section title="Contact" color="vue-green">
       This is my Contact
     </Section>
   </div>
