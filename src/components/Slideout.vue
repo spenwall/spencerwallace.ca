@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white shadow-lg fixed w-48 h-screen">
     <div
-      class="h-24 text-xl flex justify-center items-center border-solid text-vue-blue border-b-2 border-t-0 border-r-0 border-l-0 border-vue-grey"
+      class="h-24 mb-4 text-xl flex justify-center items-center text-vue-blue border-b-2 border-vue-grey"
     >Spencer Wallace</div>
     <ul>
       <li class="ml-10 mb-8 flex items-center">

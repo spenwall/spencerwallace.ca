@@ -1,5 +1,8 @@
 <template>
   <Layout>
+    <div class="h-screen">
+
+    </div>
     <div>
       <About />
       <Projects />

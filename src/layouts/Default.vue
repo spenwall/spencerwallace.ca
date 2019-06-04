@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex bg-gray-100">
     <slideout v-if="show"/>
     <div class="ml-48 w-full">
       <slot/>
