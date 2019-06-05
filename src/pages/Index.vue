@@ -1,17 +1,19 @@
 <template>
   <Layout>
-    <div class="h-screen flex justify-center items-center">
-      <div>
+    <div
+      class="h-screen flex md:justify-start items-start justify-center bg-center bg-auto bg-75% lg:bg-50% bg-no-repeat bkg-img"
+    >
+      <div class="mt-8 sm:ml-8 flex justify-center flex-col items-center">
         <transition name="fade">
           <div
             v-if="loaded"
-            class="text-6xl text-vue-blue flex justify-center leading-tight"
+            class="text-4xl md:text-5xl lg:text-6xl text-vue-blue leading-tight"
           >Spencer Wallace</div>
         </transition>
         <transition name="up">
           <div
             v-if="loaded"
-            class="text-5xl text-vue-green flex justify-center leading-tight"
+            class="text-3xl md:text-4xl lg:text-5xl text-vue-green flex justify-center leading-tight"
           >Full Stack Developer</div>
         </transition>
       </div>
@@ -116,5 +118,9 @@ img {
 
 .home-links a {
   margin-right: 1rem;
+}
+
+.bkg-img {
+  background-image: url("../assets/images/undraw_laravel_and_vue.svg");
 }
 </style>

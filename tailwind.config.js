@@ -9,6 +9,13 @@ module.exports = {
           'red': '#D13E4D',
           'yellow': '#EDDD68',
       }
+    },
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '50%': '50%',
+      '75%': '75%',
     }
   },
   variants: {},

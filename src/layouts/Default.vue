@@ -1,7 +1,7 @@
 <template>
   <div class="flex bg-gray-100">
-    <slideout v-if="show"/>
-    <div class="ml-48 w-full">
+    <slideout v-if="show" class="hidden md:block"/>
+    <div class="md:ml-56 w-full">
       <slot/>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
     }
   }
 }
-</script>
+</script> 
 
 
 

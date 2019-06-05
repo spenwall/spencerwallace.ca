@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-lg fixed w-48 h-screen">
+  <div class="bg-white shadow-lg fixed w-56 h-screen">
     <div
       class="h-24 mb-4 text-xl flex justify-center items-center text-vue-blue border-b-2 border-vue-grey"
     >Spencer Wallace</div>
