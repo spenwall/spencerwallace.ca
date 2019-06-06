@@ -1,10 +1,12 @@
 <template>
   <div class="flex bg-gray-100">
     <transition name="slide-right">
-      <slideout v-if="show" class="hidden md:block"/>
+      <slideout v-if="show" class="hidden md:block z-10"/>
     </transition>
-    <div class="md:ml-56 w-full">
-      <slot/>
+    <div v-if="show" @click="close" class="hidden w-full h-full bg-black opacity-25 fixed">
+      </div>
+      <div class="md:ml-56 w-full">
+        <slot/>
     </div>
   </div>
 </template>
@@ -18,10 +20,10 @@ export default {
   },
   methods: {
     onLoaded() {
-      this.show = true
+      this.show = true;
     },
     close() {
-      this.show = !this.show
+      this.show = !this.show;
     }
   },
   mounted: function() {
@@ -53,7 +55,7 @@ query {
 
 .slide-right-enter,
 .slide-right-leave-to {
-  transform: translateX(-225px)
+  transform: translateX(-225px);
 }
 
 body {
