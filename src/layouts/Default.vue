@@ -1,6 +1,8 @@
 <template>
   <div class="flex bg-gray-100">
-    <slideout v-if="show" class="hidden md:block"/>
+    <transition name="slide-right">
+      <slideout v-if="show" class="hidden md:block"/>
+    </transition>
     <div class="md:ml-56 w-full">
       <slot/>
     </div>
@@ -14,12 +16,23 @@ export default {
   components: {
     slideout
   },
+  methods: {
+    onLoaded() {
+      this.show = true
+    },
+    close() {
+      this.show = !this.show
+    }
+  },
+  mounted: function() {
+    this.onLoaded();
+  },
   data: function() {
     return {
-      show: true
-    }
+      show: false
+    };
   }
-}
+};
 </script> 
 
 
@@ -33,12 +46,14 @@ query {
 </static-query>
 
 <style>
-.fade-enter-active {
-  transition: opacity 0.5s;
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: transform 1s;
 }
 
-.fade-enter {
-  opacity: 0;
+.slide-right-enter,
+.slide-right-leave-to {
+  transform: translateX(-225px)
 }
 
 body {
