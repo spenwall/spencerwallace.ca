@@ -56,7 +56,7 @@ query {
 <style>
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition: transform 1s;
+  transition: transform .6s;
 }
 
 .slide-right-enter,
