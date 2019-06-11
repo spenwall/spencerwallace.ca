@@ -8,43 +8,43 @@
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'user']"/>
         </div>
-        <a href="#About" v-smooth-scroll>About</a>
+        <a href="#About" v-smooth-scroll="{offset: -30}">About</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
-        <a href="#Projects" v-smooth-scroll>Projects</a>
+        <a href="#Projects" v-smooth-scroll="{offset: -30}">Projects</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>
         </div>
-        <a href="#Experience" v-smooth-scroll>Experience</a>
+        <a href="#Experience" v-smooth-scroll="{offset: -30}">Experience</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-plum text-xl" :icon="['fas', 'pencil-ruler']"/>
         </div>
-        <a href="#Skills" v-smooth-scroll>Skills</a>
+        <a href="#Skills" v-smooth-scroll="{offset: -30}">Skills</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-red text-xl" :icon="['fas', 'graduation-cap']"/>
         </div>
-        <a href="#Education" v-smooth-scroll>Education</a>
+        <a href="#Education" v-smooth-scroll="{offset: -30}">Education</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'address-card']"/>
         </div>
-        <a href="#Contact" v-smooth-scroll>Contact</a>
+        <a href="#Contact" v-smooth-scroll="{offset: -30}">Contact</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'file-alt']"/>
         </div>
-        <a href="#Resume" v-smooth-scroll>Resume</a>
+        <a href="#Resume" v-smooth-scroll="{offset: -30}">Resume</a>
       </li>
     </ul>
   </div>

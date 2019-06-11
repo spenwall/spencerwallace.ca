@@ -1,11 +1,14 @@
 <template>
   <div class="flex bg-gray-100">
+    <div @click="menu" class="w-full h-10 flex items-center bg-white fixed md:hidden">
+      <font-awesome class="ml-8 text-gray-500 text-xl" :icon="['fas', 'bars']"/>
+    </div>
     <transition name="slide-right">
-      <slideout v-if="show" class="hidden md:block z-10"/>
+      <slideout v-if="show" class="md:block z-10"/>
     </transition>
-    <div v-if="show" @click="close" class="hidden w-full h-full bg-black opacity-25 fixed">
+    <div v-if="show" @click="close" class="md:hidden w-full h-full bg-black opacity-25 fixed">
       </div>
-      <div class="md:ml-56 w-full">
+      <div class="mt-10 md:ml-56 w-full">
         <slot/>
     </div>
   </div>
@@ -20,10 +23,13 @@ export default {
   },
   methods: {
     onLoaded() {
-      this.show = true;
+      this.show = true
     },
     close() {
-      this.show = !this.show;
+      this.show = false
+    },
+    menu() {
+      this.show = !this.show
     }
   },
   mounted: function() {

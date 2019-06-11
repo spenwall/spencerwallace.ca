@@ -8,12 +8,14 @@ import { faUser,
   faGraduationCap,
   faAddressCard,
   faFileAlt,
+  faBars,
  } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { resultKeyNameFromField } from 'apollo-utilities';
 
 config.autoAddCss = false
-library.add(faGithub, 
+library.add(
+  faGithub, 
   faTwitter, 
   faUser, 
   faFolderOpen,
@@ -22,6 +24,7 @@ library.add(faGithub,
   faGraduationCap,
   faAddressCard,
   faFileAlt,
+  faBars,
   )
 
 export default function (Vue) {
