@@ -1,9 +1,10 @@
 <template>
   <Layout>
     <div
-      class="h-screen flex md:justify-start items-start justify-center bg-center bg-auto bg-75% lg:bg-50% bg-no-repeat bkg-img"
+      class="h-screen flex md:justify-start items-start justify-center bg-center bg-auto bg-75% lg:bg-50% bg-no-repeat"
+      style="background-image: url(/svg/undraw_laravel_and_vue.svg)"
     >
-      <div class="mt-8 sm:ml-8 flex justify-center flex-col items-center">
+      <div class="md:mt-8 md:ml-8 flex justify-center flex-col items-center">
         <transition name="fade">
           <div
             v-if="loaded"
@@ -22,7 +23,7 @@
       <About/>
       <Projects/>
       <Experience/>
-      <Skills/>
+      <Tech/>
       <Education/>
       <Contact/>
       <Resume/>
@@ -56,7 +57,7 @@ import { Pager } from "gridsome";
 import About from "~/components/section/About.vue";
 import Projects from "~/components/section/Projects.vue";
 import Experience from "~/components/section/Experience.vue";
-import Skills from "~/components/section/Skills.vue";
+import Tech from "~/components/section/Tech.vue";
 import Education from "~/components/section/Education.vue";
 import Contact from "~/components/section/Contact.vue";
 import Resume from "~/components/section/Resume.vue";
@@ -67,7 +68,7 @@ export default {
     About,
     Projects,
     Experience,
-    Skills,
+    Tech,
     Education,
     Contact,
     Resume
@@ -110,17 +111,5 @@ export default {
 .up-enter {
   opacity: 0;
   transform: translateY(100px);
-}
-
-img {
-  width: 100%;
-}
-
-.home-links a {
-  margin-right: 1rem;
-}
-
-.bkg-img {
-  background-image: url("../assets/images/undraw_laravel_and_vue.svg");
 }
 </style>

@@ -3,7 +3,7 @@
     <Section title="Experience" color="yellow">
       <div class="w-full flex justify-center">
         <div class="flex justify-center max-w-5xl flex-wrap">
-          <Card title="Sr. Software Engineer: Weddingstar June 2018 - Present">
+          <Card title="Sr. Software Engineer: Weddingstar June 2016 - Present">
             <ul class="list-disc mx-0 my-4 pl-12">
               <li>
                 Responsible for site architecture, and dev ops for one of the largest worldwide online wedding retailers
