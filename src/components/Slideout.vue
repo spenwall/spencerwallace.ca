@@ -26,7 +26,7 @@
         <div class="w-8">
           <font-awesome class="text-plum text-xl" :icon="['fas', 'pencil-ruler']"/>
         </div>
-        <a href="#Skills" v-smooth-scroll="{offset: -30}">Skills</a>
+        <a href="#Tech" v-smooth-scroll="{offset: -30}">Tech</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
