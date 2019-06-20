@@ -4,9 +4,12 @@
       <font-awesome class="ml-8 text-gray-500 text-xl" :icon="['fas', 'bars']"/>
     </div>
     <transition name="slide-right">
-      <slideout v-if="show" class="md:block z-10"/>
+      <slideout v-if="show" class="hidden md:block z-10"/>
     </transition>
-    <div v-if="show" @click="close" class="md:hidden w-full h-full bg-black opacity-25 fixed">
+    <transition name="slide-right">
+      <slideout v-if="mobile" :close="close" class="md:hidden z-10"/>
+    </transition>
+    <div v-if="mobile" @click="close" class="md:hidden w-full h-full bg-black opacity-25 fixed">
       </div>
       <div class="mt-10 md:ml-56 w-full">
         <slot/>
@@ -26,10 +29,10 @@ export default {
       this.show = true
     },
     close() {
-      this.show = false
+      this.mobile = false
     },
     menu() {
-      this.show = !this.show
+      this.mobile = !this.mobile
     }
   },
   mounted: function() {
@@ -37,7 +40,8 @@ export default {
   },
   data: function() {
     return {
-      show: false
+      show: false,
+      mobile: false,
     };
   }
 };

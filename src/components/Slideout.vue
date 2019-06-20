@@ -1,7 +1,8 @@
 <template>
   <div class="bg-white shadow-lg fixed w-56 h-screen">
+    <font-awesome @click="close" class="m-4 fixed" :icon="['fas', 'times']" />
     <div
-      class="h-24 mb-4 text-xl flex justify-center items-center text-vue-blue border-b-2 border-vue-grey"
+      class="h-32 mb-4 text-xl flex justify-center items-center text-vue-blue border-b-2 border-vue-grey"
     >Spencer Wallace</div>
     <ul>
       <li class="ml-10 mb-8 flex items-center">
@@ -50,4 +51,8 @@
   </div>
 </template>
 
-
+<script>
+export default {
+  props: ["close"]
+}
+</script>
