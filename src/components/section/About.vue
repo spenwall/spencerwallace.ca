@@ -2,7 +2,7 @@
   <div>
     <Section title="About" color="vue-green">
       <div class="flex justify-center">
-        <div class="max-w-5xl">
+        <div class="sm:w-4/5">
           <Card title="About Me">
             <div class="pb-4">
               I am a pationate developer that loves PHP, and JavaScript. Curenltly im working in Laravel, Zend and Vue. I
