@@ -7,7 +7,7 @@
       <slideout v-if="show" class="hidden md:block z-10"/>
     </transition>
     <transition name="slide-right">
-      <slideout v-if="mobile" :close="close" class="md:hidden z-10"/>
+      <slideout v-if="mobile" :close="close" mobile="true" class="md:hidden z-10"/>
     </transition>
     <div v-if="mobile" @click="close" class="md:hidden w-full h-full bg-black opacity-25 fixed">
       </div>
