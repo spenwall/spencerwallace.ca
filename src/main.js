@@ -4,12 +4,12 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/styles/style.css'
 import 'prism-themes/themes/prism-atom-dark.css'
-import vueSmoothScroll from 'vue2-smooth-scroll'
+// import vueSmoothScroll from 'vue2-smooth-scroll'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
-  Vue.use(vueSmoothScroll)
+  // Vue.use(vueSmoothScroll)
 
   head.link.push({
     rel: 'stylesheet',
