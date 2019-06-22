@@ -5,8 +5,8 @@
           <Card class="sm:w-4/5" title="Languages">
             <div class="flex justify-around flex-wrap p-4">
               <JsLogo width="100px" height="100px"/>
-              <PHP width="100px" height="100px"/>
               <vueLogo width="100px" height="100px"/>
+              <PHP width="100px" height="100px"/>
               <ZendLogo width="100px" height="100px"/>
               <DockerLogo width="100px" height="100px"/>
             </div>

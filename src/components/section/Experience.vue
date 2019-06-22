@@ -27,7 +27,7 @@
               <li>Successfully led a team in charge or improving building change requests by 25% overall</li>
             </ul>
           </Card>
-          <Card title="Web Development Manager: Split 5 - Sept 2007 - Sept 2009">
+          <Card title="Web Development Support: Split 5 - Sept 2007 - Sept 2009">
             <ul class="list-disc mx-0 my-4 pl-12">
               <li>Managed a team of 8 developers creating HTML and flash websites</li>
               <li>Provide customer support for over 40 websites at a time including updateing user content, and fixing bugs</li>
