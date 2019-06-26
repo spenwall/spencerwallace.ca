@@ -1,17 +1,21 @@
 <template>
   <div>
     <Section title="Projects">
-      This is my projects
+      <ImageCard color="plum" image="~/assets/images/spencer.jpg" >
+        Redflag Alerts
+      </ImageCard>
     </Section>
   </div>
 </template>
 
 <script>
 import Section from "./Section.vue";
+import ImageCard from "../ImageCard.vue";
 
 export default {
   components: {
-    Section
+    Section,
+    ImageCard,
   }
 };
 </script>
