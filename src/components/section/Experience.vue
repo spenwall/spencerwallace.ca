@@ -3,7 +3,7 @@
     <Section title="Experience" color="yellow">
       <div class="w-full flex justify-center">
         <div class="flex justify-center sm:w-4/5 flex-wrap">
-          <Card title="Sr. Software Engineer: Weddingstar June 2016 - Present">
+          <Card class="w-full" title="Sr. Software Engineer: Weddingstar June 2016 - Present">
             <ul class="list-disc mx-0 my-4 pl-12">
               <li>
                 Responsible for site architecture, and dev ops for one of the largest worldwide online wedding retailers
@@ -18,7 +18,7 @@
               <li>Full stack development using PHP (Zend Framework), JavaScript, HTML, SASS</li>
             </ul>
           </Card>
-          <Card title="Business Analyst: Alberta Governemnt Sept 2012 - June 2015">
+          <Card class="w-full" title="Business Analyst: Alberta Governemnt Sept 2012 - June 2015">
             <ul class="list-disc mx-0 my-4 pl-12">
               <li>Gathered user requirements to convert to technical requirements</li>
               <li>Tested technical implementations using development environment</li>
@@ -27,7 +27,7 @@
               <li>Successfully led a team in charge or improving building change requests by 25% overall</li>
             </ul>
           </Card>
-          <Card title="Web Development Support: Split 5 - Sept 2007 - Sept 2009">
+          <Card class="w-full" title="Web Development Support: Split 5 - Sept 2007 - Sept 2009">
             <ul class="list-disc mx-0 my-4 pl-12">
               <li>Managed a team of 8 developers creating HTML and flash websites</li>
               <li>Provide customer support for over 40 websites at a time including updateing user content, and fixing bugs</li>
