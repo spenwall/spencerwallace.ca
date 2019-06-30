@@ -1,7 +1,7 @@
 <template>
   <div>
     <Section title="Projects">
-      <ImageCard color="plum" image="~/assets/images/spencer.jpg" >
+      <ImageCard color="vue-blue" image="~/assets/images/spencer.jpg" >
         Redflag Alerts
       </ImageCard>
     </Section>
