@@ -2,7 +2,7 @@
   <div>
     <Section title="Contact" color="vue-green">
       <div class="w-full flex justify-center">
-        <Card class="sm:w-1/3" title="Contact Me">
+        <Card class="md:w-1/3" title="Contact Me">
           <div class="flex flex-wrap flex-col justify-between">
             <div class="my-4">
               <a class="flex items-center" href="mailto:spencerwallace@outlook.com">

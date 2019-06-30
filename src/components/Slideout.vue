@@ -55,12 +55,26 @@
         </div>
         <a @click="close" href="#Resume" v-smooth-scroll="{offset: -30}">Resume</a>
       </li>
+      <li class="ml-10 mb-8 flex items-center">
+        <div class="w-8">
+          <font-awesome class="text-plum text-xl" :icon="['fas', 'file-alt']" />
+        </div>
+        <g-link to="/blog">Blog</g-link>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["close", "mobile"]
+  props: {
+    close: {
+      type: Function,
+      default: () => {}
+    },
+    mobile: {
+      default: false
+    }
+  }
 };
 </script>

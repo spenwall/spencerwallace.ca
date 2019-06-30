@@ -1,15 +1,15 @@
 <template>
   <div class="flex bg-gray-100">
-    <div @click="menu" class="w-full h-10 flex items-center bg-white fixed md:hidden">
+    <div @click="openMobileMenu" class="w-full h-10 flex items-center bg-white fixed md:hidden">
       <font-awesome class="ml-8 text-gray-500 text-xl" :icon="['fas', 'bars']"/>
     </div>
     <transition name="slide-right">
       <slideout v-if="show" class="hidden md:block z-10"/>
     </transition>
     <transition name="slide-right">
-      <slideout v-if="mobile" :close="close" mobile="true" class="md:hidden z-10"/>
+      <slideout v-if="mobileMenu" :close="closeMobileMenu" mobile="true" class="md:hidden z-10"/>
     </transition>
-    <div v-if="mobile" @click="close" class="md:hidden w-full h-full bg-black opacity-25 fixed">
+    <div v-if="mobileMenu" @click="closeMobileMenu" class="md:hidden w-full h-full bg-black opacity-25 fixed">
       </div>
       <div class="mt-10 md:ml-56 w-full">
         <slot/>
@@ -28,11 +28,11 @@ export default {
     onLoaded() {
       this.show = true
     },
-    close() {
-      this.mobile = false
+    closeMobileMenu() {
+      this.mobileMenu = false
     },
-    menu() {
-      this.mobile = !this.mobile
+    openMobileMenu() {
+      this.mobileMenu = true
     }
   },
   mounted: function() {
@@ -41,7 +41,7 @@ export default {
   data: function() {
     return {
       show: false,
-      mobile: false,
+      mobileMenu: false,
     };
   }
 };
