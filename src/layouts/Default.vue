@@ -1,6 +1,6 @@
 <template>
   <div class="flex bg-gray-100">
-    <div @click="openMobileMenu" class="w-full h-10 flex items-center bg-white fixed md:hidden">
+    <div @click="openMobileMenu" class="z-10 w-full h-10 flex items-center bg-white fixed md:hidden">
       <font-awesome class="ml-8 text-gray-500 text-xl" :icon="['fas', 'bars']"/>
     </div>
     <transition name="slide-right">

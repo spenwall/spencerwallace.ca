@@ -17,43 +17,43 @@
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'user']"/>
         </div>
-        <a @click="close" href="#About" v-smooth-scroll="{offset: -30}">About</a>
+        <a @click="close" href="#" v-scroll-to="'#About'">About</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
-        <a @click="close" href="#Projects" v-smooth-scroll="{offset: -30}">Projects</a>
+        <a @click="close" href="#Projects" v-scroll-to="{offset: -30}">Projects</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>
         </div>
-        <a @click="close" href="#Experience" v-smooth-scroll="{offset: -30}">Experience</a>
+        <a @click="close" href="#Experience" v-scroll-to="{offset: -30}">Experience</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-plum text-xl" :icon="['fas', 'pencil-ruler']"/>
         </div>
-        <a @click="close" href="#Tech" v-smooth-scroll="{offset: -30}">Tech</a>
+        <a @click="close" href="#Tech" v-scroll-to="{offset: -30}">Tech</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-red text-xl" :icon="['fas', 'graduation-cap']"/>
         </div>
-        <a @click="close" href="#Education" v-smooth-scroll="{offset: -30}">Education</a>
+        <a @click="close" href="#Education" v-scroll-to="{offset: -30}">Education</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'address-card']"/>
         </div>
-        <a @click="close" href="#Contact" v-smooth-scroll="{offset: -30}">Contact</a>
+        <a @click="close" href="#Contact" v-scroll-to="{offset: -30}">Contact</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'file-alt']"/>
         </div>
-        <a @click="close" href="#Resume" v-smooth-scroll="{offset: -30}">Resume</a>
+        <a @click="close" href="#Resume" v-scroll-to="{offset: -30}">Resume</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
