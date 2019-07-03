@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="About" color="vue-green">
+    <Section title="About" color="bg-vue-green">
       <div class="flex justify-center">
         <div class="sm:w-4/5">
           <Card title="About Me">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="Tech" color="plum">
+    <Section title="Tech" color="bg-plum">
       <div class="flex justify-center">
           <Card class="sm:w-4/5" title="Languages">
             <div class="flex justify-around flex-wrap p-4">

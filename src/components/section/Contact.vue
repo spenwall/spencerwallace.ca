@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="Contact" color="vue-green">
+    <Section title="Contact" color="bg-vue-green">
       <div class="w-full flex justify-center">
         <Card class="md:w-1/3" title="Contact Me">
           <div class="flex flex-wrap flex-col justify-between">

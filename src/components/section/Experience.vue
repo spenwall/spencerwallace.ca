@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Section title="Experience" color="yellow">
+    <Section title="Experience" color="bg-yellow">
       <div class="w-full flex justify-center">
         <div class="flex justify-center sm:w-4/5 flex-wrap">
           <Card class="w-full" title="Sr. Software Engineer: Weddingstar June 2016 - Present">
