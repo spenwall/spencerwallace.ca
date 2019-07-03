@@ -23,37 +23,37 @@
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
-        <a @click="close" href="#Projects" v-scroll-to="{offset: -30}">Projects</a>
+        <a @click="close" href="#" v-scroll-to="'#Projects'">Projects</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>
         </div>
-        <a @click="close" href="#Experience" v-scroll-to="{offset: -30}">Experience</a>
+        <a @click="close" href="#" v-scroll-to="'#Experience'">Experience</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-plum text-xl" :icon="['fas', 'pencil-ruler']"/>
         </div>
-        <a @click="close" href="#Tech" v-scroll-to="{offset: -30}">Tech</a>
+        <a @click="close" href="#" v-scroll-to="'#Tech'">Tech</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-red text-xl" :icon="['fas', 'graduation-cap']"/>
         </div>
-        <a @click="close" href="#Education" v-scroll-to="{offset: -30}">Education</a>
+        <a @click="close" href="#" v-scroll-to="'#Education'">Education</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'address-card']"/>
         </div>
-        <a @click="close" href="#Contact" v-scroll-to="{offset: -30}">Contact</a>
+        <a @click="close" href="#" v-scroll-to="'#Contact'">Contact</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'file-alt']"/>
         </div>
-        <a @click="close" href="#Resume" v-scroll-to="{offset: -30}">Resume</a>
+        <a @click="close" href="#" v-scroll-to="'#Resume'">Resume</a>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
