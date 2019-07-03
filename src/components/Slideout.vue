@@ -13,6 +13,7 @@
       <div class="text-sm">A Guy Who Codes</div>
     </div>
     <ul>
+      <MenuLink link-name="About" :close="close" icon-color="text-vue-blue" :icon="['fas', 'user']" />
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-green" :icon="['fas', 'user']"/>
@@ -66,6 +67,8 @@
 </template>
 
 <script>
+import MenuLink from './MenuLink';
+
 export default {
   props: {
     close: {
@@ -75,6 +78,9 @@ export default {
     mobile: {
       default: false
     }
+  },
+  components: {
+    MenuLink
   }
 };
 </script>
