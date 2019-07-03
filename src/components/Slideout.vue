@@ -15,7 +15,7 @@
     <ul>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
-          <font-awesome class="text-vue-green text-xl" :icon="['fas', 'user']"/>
+          <font-awesome class="text-vue-green" :icon="['fas', 'user']"/>
         </div>
         <a @click="close" href="#" v-scroll-to="'#About'">About</a>
       </li>
