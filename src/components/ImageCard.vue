@@ -3,11 +3,11 @@
     <div class="flex flex-col w-64 relative">
       <div class="transition absolute w-12 h-12 top-0 border-4 border-white hover:bg-blue-800
        right-0 m-2 flex justify-center items-center rounded-full"
-       :class="backgroundColor">
+       :class="color">
         <font-awesome class="text-white" :icon="['fas', 'question']"/>
       </div>
       <g-image src="~/assets/images/spencer.jpg" alt="project"></g-image>
-      <div :class="backgroundColor" class="min-h-4 text-white p-4">
+      <div :class="color" class="min-h-4 text-white p-4">
         <slot />
       </div>
     </div>
@@ -18,14 +18,9 @@
 export default {
   props: {
     color: {
-      default: 'blue-500',
+      default: 'bg-blue-500',
     }, 
     image: {}
   },
-  computed: {
-    backgroundColor: function () {
-      return 'bg-' + this.color
-    }
-  }
 }
 </script>
