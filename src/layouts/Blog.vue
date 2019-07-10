@@ -31,12 +31,12 @@
     <footer class="bg-vue-blue h-20 flex justify-end items-center">
       <a class="m-2" href="https://twitter.com/spenwall" target="_blank">
         <div class="text-white">
-          <twitter/>
+          <font-awesome class="text-2xl mr-2" :icon="['fab', 'twitter']"/>
         </div>
       </a>
       <a class="m-2" href="https://github.com/spenwall" target="_blank">
         <div class="text-white">
-          <github/>
+          <font-awesome class="text-2xl mr-2" :icon="['fab', 'github']"/>
         </div>
       </a>
     </footer>
@@ -50,19 +50,6 @@ query {
   }
 }
 </static-query>
-
-<script>
-import twitter from "~/assets/images/twitter";
-import github from "~/assets/images/github.vue";
-
-export default {
-  components: {
-    twitter,
-    github
-  }
-};
-</script>
-
 
 <style>
 .fade-enter-active {

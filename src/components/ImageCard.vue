@@ -10,7 +10,7 @@
       <div class="relative">
         <g-image :src="image" alt="project"></g-image>
         <transition name="info-transition">
-          <div v-if="info" class="bg-white absolute top-0 w-full h-full">
+          <div v-if="info" class="bg-white absolute top-0 w-full h-full p-3 overflow-hidden">
             This app scrapes the redflagdeals.com website and sends notifications of new deals matching keywords
           </div>
         </transition>
@@ -53,11 +53,11 @@ export default {
 <style>
 .info-transition-enter-active,
 .info-transition-leave-active {
-  transition: opacity .6s;
+  transition: all .5s ease-in-out;
 }
 
 .info-transition-enter,
 .info-transition-leave-to {
-  opacity: 0;
+  height: 0px;
 }
 </style>
