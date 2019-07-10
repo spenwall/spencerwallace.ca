@@ -51,11 +51,11 @@ export default {
 <style>
 .info-transition-enter-active,
 .info-transition-leave-active {
-  transition: transform .6s;
+  transition: opacity .6s;
 }
 
 .info-transition-enter,
 .info-transition-leave-to {
-  transform: translateX(-225px);
+  opacity: 0;
 }
 </style>
