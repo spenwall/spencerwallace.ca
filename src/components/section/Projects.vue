@@ -1,8 +1,8 @@
 <template>
   <div>
     <Section color="bg-vue-blue" title="Projects">
-      <ImageCard color="bg-vue-blue" image="~/assets/images/spencer.jpg" >
-        Redflag Alerts
+      <ImageCard color="bg-vue-blue" image="~/assets/images/Redflag-Deal-Alerts.png" >
+        Redflag Deal Alerts
       </ImageCard>
     </Section>
   </div>

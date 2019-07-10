@@ -6,7 +6,7 @@
        :class="color">
         <font-awesome class="text-white" :icon="['fas', 'question']"/>
       </div>
-      <g-image src="~/assets/images/spencer.jpg" alt="project"></g-image>
+      <g-image :src="image" alt="project"></g-image>
       <div :class="color" class="min-h-4 text-white p-4">
         <slot />
       </div>
@@ -20,7 +20,10 @@ export default {
     color: {
       default: 'bg-blue-500',
     }, 
-    image: {}
+    image: {
+      type: String,
+      default: ''
+    }
   },
 }
 </script>
