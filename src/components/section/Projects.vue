@@ -5,8 +5,8 @@
         title="Red Flag Deals" 
         image="assets/static/src/assets/images/Redflag-Deal-Alerts.png"
       >
-        <template #test>
-          This is amazing
+        <template #info>
+           
         </template>j
       </ImageCard>
     </Section>

@@ -10,7 +10,9 @@
       <div class="relative">
         <g-image :src="image" alt="project"></g-image>
         <transition name="info-transition">
-          <div v-if="info" class="bg-white absolute top-0 w-full h-full">This is something</div>
+          <div v-if="info" class="bg-white absolute top-0 w-full h-full">
+            This app scrapes the redflagdeals.com website and sends notifications of new deals matching keywords
+          </div>
         </transition>
       </div>
       <div :class="color" class="min-h-4 text-white p-4">
