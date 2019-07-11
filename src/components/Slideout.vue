@@ -1,11 +1,5 @@
 <template>
   <div class="bg-white shadow-lg fixed w-56 h-screen">
-    <font-awesome
-      v-if="mobile"
-      @click="close"
-      class="m-4 ml-8 text-xl fixed text-gray-500"
-      :icon="['fas', 'times']"
-    />
     <div
       class="h-32 mb-4 text-2xl font-bold flex flex-col justify-center items-center text-vue-blue border-b-2 border-vue-grey"
     >
@@ -19,12 +13,12 @@
         </div>
         <a @click="close" href="#" v-scroll-to="'#About'">About</a>
       </li>
-      <li class="ml-10 mb-8 flex items-center">
+      <!-- <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
         <a @click="close" href="#" v-scroll-to="'#Projects'">Projects</a>
-      </li>
+      </li> -->
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>
