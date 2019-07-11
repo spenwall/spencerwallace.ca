@@ -12,6 +12,7 @@ import { faUser,
   faTimes,
   faEnvelope,
   faQuestion,
+  faBlog,
  } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { resultKeyNameFromField } from 'apollo-utilities';
@@ -32,6 +33,7 @@ library.add(
   faTimes,
   faEnvelope,
   faQuestion,
+  faBlog,
   )
 
 export default function (Vue) {
