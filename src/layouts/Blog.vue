@@ -18,7 +18,7 @@
           </strong>
         </div>
         <nav class="nav">
-          <g-link class="text-white hover:text-vue-blue mr-5" to="/">Home</g-link>
+          <g-link class="text-white hover:text-vue-blue mr-5" to="/blog">Home</g-link>
         </nav>
       </header>
     </div>
