@@ -64,11 +64,7 @@ export default {
   props: {
     close: {
       type: Function,
-      default: () => {}
     },
-    mobile: {
-      default: false
-    }
   },
 };
 </script>

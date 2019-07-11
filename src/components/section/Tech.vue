@@ -2,7 +2,7 @@
   <div>
     <Section title="Tech" color="bg-plum">
       <div class="flex justify-center">
-          <Card class="sm:w-4/5" title="Languages">
+          <Card class="sm:w-4/5" title="Common Tech Stack">
             <div class="flex justify-around flex-wrap p-4">
               <JsLogo width="100px" height="100px"/>
               <vueLogo width="100px" height="100px"/>
