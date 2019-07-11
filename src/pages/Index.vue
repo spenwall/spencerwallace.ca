@@ -1,26 +1,33 @@
 <template>
   <Layout>
-    <ul>
-      <li class="shadow-lg mb-5" v-for="{ node } in $page.allBlogPost.edges" :key="node._id">
-        <router-link :to="node.path">
-          <h2 class="p-6" v-html="node.title"/>
-          <g-image :src="node.image"/>
-          <div class="p-6">
-            <div class="text-grey-200 mb-5" v-html="node.date"/>
-            <div class="text-black" v-html="node.description"/>
-          </div>
-        </router-link>
-      </li>
-    </ul>
-    <Pager
-      class="flex justify-between"
-      :info="$page.allBlogPost.pageInfo"
-      prevLabel="< Newer Posts"
-      nextLabel="Older Posts >"
-      firstLabel=""
-      lastLabel=""
-      range=" "
-    />
+    <div
+      class="h-screen flex md:justify-start items-start justify-center bg-center bg-auto bg-75% lg:bg-50% bg-no-repeat"
+      style="background-image: url(/svg/undraw_laravel_and_vue.svg)"
+    >
+      <div class="md:mt-8 md:ml-8 flex justify-center flex-col items-center">
+        <transition name="fade">
+          <div
+            v-if="loaded"
+            class="text-4xl md:text-5xl lg:text-6xl text-vue-blue leading-tight"
+          >Spencer Wallace</div>
+        </transition>
+        <transition name="up">
+          <div
+            v-if="loaded"
+            class="text-3xl md:text-4xl lg:text-5xl text-vue-green flex justify-center leading-tight"
+          >Full Stack Developer</div>
+        </transition>
+      </div>
+    </div>
+    <div>
+      <About/>
+      <!-- <Projects/> -->
+      <Experience/>
+      <Tech/>
+      <Education/>
+      <Contact/>
+      <Resume/>
+    </div>
   </Layout>
 </template>
 
@@ -47,10 +54,37 @@
 
 <script>
 import { Pager } from "gridsome";
+import About from "~/components/section/About.vue";
+// import Projects from "~/components/section/Projects.vue";
+import Experience from "~/components/section/Experience.vue";
+import Tech from "~/components/section/Tech.vue";
+import Education from "~/components/section/Education.vue";
+import Contact from "~/components/section/Contact.vue";
+import Resume from "~/components/section/Resume.vue";
 
 export default {
   components: {
-    Pager
+    Pager,
+    About,
+    // Projects,
+    Experience,
+    Tech,
+    Education,
+    Contact,
+    Resume
+  },
+  methods: {
+    onLoaded() {
+      this.loaded = true;
+    }
+  },
+  mounted: function() {
+    this.onLoaded();
+  },
+  data: function() {
+    return {
+      loaded: false
+    };
   },
   metaInfo: {
     title: "Hello, world!"
@@ -58,12 +92,25 @@ export default {
 };
 </script>
 
-<style <style scoped>
-img {
-  width: 100%;
+
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s, transform 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
-.home-links a {
-  margin-right: 1rem;
+.up-enter-active {
+  transition: 1.2s;
+}
+
+.up-enter {
+  opacity: 0;
+  transform: translateY(100px);
 }
 </style>
+// 

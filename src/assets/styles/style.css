@@ -1,4 +1,4 @@
-@tailwind preflight;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -8,9 +8,4 @@ a {
 
 a:hover {
   color: #42b883;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
 }

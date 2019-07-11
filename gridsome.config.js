@@ -1,8 +1,8 @@
-// This is where project configuration and plugin options are located. 
-// Learn more: https://gridsome.org/docs/config
+const tailwind = require('tailwindcss')
 
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+const postcssPlugins = [
+  tailwind('./tailwind.config.js'),
+]
 
 module.exports = {
   siteName: 'Spencer Wallace',
@@ -19,21 +19,36 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-plugin-tailwindcss'
-    },
-    {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-140380361-1'
       }
     }
   ],
-
   transformers: {
     remark: {
       plugins: [
         '@gridsome/remark-prismjs'
       ]
     }
-  }
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins,
+      },
+    },
+  },
+  chainWebpack: config => {
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule
+      .use('vue-svg-loader')
+      .loader('vue-svg-loader')
+      .options({
+        svgo: {
+          plugins: [{ removeViewBox: false }]
+        }
+      })
+    }
 }
