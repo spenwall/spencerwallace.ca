@@ -4,7 +4,7 @@
       <ImageCard color="bg-vue-blue" 
         title="Red Flag Deals" 
         image="assets/static/src/assets/images/Redflag-Deal-Alerts.png"
-      >
+      > 
         <template #info>
            
         </template>j

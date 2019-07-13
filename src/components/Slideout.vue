@@ -13,12 +13,12 @@
         </div>
         <a @click="close" href="#" v-scroll-to="'#About'">About</a>
       </li>
-      <!-- <li class="ml-10 mb-8 flex items-center">
+      <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
         <a @click="close" href="#" v-scroll-to="'#Projects'">Projects</a>
-      </li> -->
+      </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>

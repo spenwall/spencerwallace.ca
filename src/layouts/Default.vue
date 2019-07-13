@@ -16,7 +16,7 @@
       <div
         v-if="mobileMenu"
         @click="closeMobileMenu"
-        class="sw:screen md:hidden w-full h-full bg-black fixed"
+        class="sw-screen md:hidden w-full h-full bg-black fixed"
       ></div>
     </transition>
     <div class="mt-10 md:ml-56 w-full">
@@ -58,8 +58,6 @@ export default {
 };
 </script> 
 
-
-
 <static-query>
 query {
   metaData {
@@ -69,7 +67,7 @@ query {
 </static-query>
 
 <style>
-.sw:screen {
+.sw-screen {
   opacity: .25;
 }
 
