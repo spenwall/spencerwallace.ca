@@ -8,7 +8,7 @@
         <font-awesome class="text-white" :icon="['fas', 'question']" />
       </div>
       <div class="relative">
-        <g-image src="~/assets/images/spencer.jpg" alt="project"/>
+        <g-image :src="image" alt="project"/>
         <transition name="info-transition">
           <div v-if="info" class="bg-white absolute top-0 w-full h-full p-3 overflow-hidden">
             This app scrapes the redflagdeals.com website and sends notifications of new deals matching keywords
