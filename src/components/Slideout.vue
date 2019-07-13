@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white shadow-lg fixed w-56 h-screen">
     <div
-      class="h-32 mb-4 text-2xl font-bold flex flex-col justify-center items-center text-vue-blue border-b-2 border-vue-grey"
+      class="h-32 mb-4 text-2xl flex flex-col justify-center items-center text-vue-blue border-b-2 border-vue-grey"
     >
       <div>Spencer Wallace</div>
       <div class="text-sm">A Guy Who Codes</div>
