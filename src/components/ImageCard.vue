@@ -7,7 +7,7 @@
       >
         <font-awesome class="text-white" :icon="['fas', 'question']" />
       </div>
-      <div class="relative flex justify-center items-center h-64">
+      <div class="relative flex justify-center h-64">
         <g-image :src="image" alt="project"/>
         <transition name="info-transition">
           <div v-if="info" class="bg-white absolute top-0 pr-12 w-full h-full p-3 overflow-hidden">
