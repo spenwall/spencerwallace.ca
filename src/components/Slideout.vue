@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white shadow-lg fixed w-56 h-screen">
     <div
-      class="h-32 mb-4 text-2xl font-bold flex flex-col justify-center items-center text-vue-blue border-b-2 border-vue-grey"
+      class="h-32 mb-4 text-2xl flex flex-col justify-center items-center text-vue-blue border-b-2 border-vue-grey"
     >
       <div>Spencer Wallace</div>
       <div class="text-sm">A Guy Who Codes</div>
@@ -13,12 +13,12 @@
         </div>
         <a @click="close" href="#" v-scroll-to="'#About'">About</a>
       </li>
-      <!-- <li class="ml-10 mb-8 flex items-center">
+      <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
         <a @click="close" href="#" v-scroll-to="'#Projects'">Projects</a>
-      </li> -->
+      </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>

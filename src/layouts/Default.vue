@@ -16,7 +16,7 @@
       <div
         v-if="mobileMenu"
         @click="closeMobileMenu"
-        class="md:hidden w-full h-full bg-black opacity-25 fixed"
+        class="sw-screen md:hidden w-full h-full bg-black fixed"
       ></div>
     </transition>
     <div class="mt-10 md:ml-56 w-full">
@@ -58,8 +58,6 @@ export default {
 };
 </script> 
 
-
-
 <static-query>
 query {
   metaData {
@@ -69,6 +67,10 @@ query {
 </static-query>
 
 <style>
+.sw-screen {
+  opacity: .25;
+}
+
 .slide-right-enter-active,
 .slide-right-leave-active {
   transition: transform 0.6s;
@@ -82,6 +84,10 @@ query {
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s;
+}
+
+.fade-enter-to {
+  opacity: .25;
 }
 
 .fade-enter, .fade-leave-to {

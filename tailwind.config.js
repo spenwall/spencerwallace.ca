@@ -16,7 +16,7 @@ module.exports = {
       'contain': 'contain',
       '50%': '50%',
       '75%': '75%',
-    }
+    },
   },
   variants: {},
   plugins: [

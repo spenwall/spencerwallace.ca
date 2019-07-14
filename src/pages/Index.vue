@@ -21,7 +21,7 @@
     </div>
     <div>
       <About/>
-      <!-- <Projects/> -->
+      <Projects/>
       <Experience/>
       <Tech/>
       <Education/>
@@ -55,7 +55,7 @@
 <script>
 import { Pager } from "gridsome";
 import About from "~/components/section/About.vue";
-// import Projects from "~/components/section/Projects.vue";
+import Projects from "~/components/section/Projects.vue";
 import Experience from "~/components/section/Experience.vue";
 import Tech from "~/components/section/Tech.vue";
 import Education from "~/components/section/Education.vue";
@@ -66,7 +66,7 @@ export default {
   components: {
     Pager,
     About,
-    // Projects,
+    Projects,
     Experience,
     Tech,
     Education,
@@ -113,4 +113,3 @@ export default {
   transform: translateY(100px);
 }
 </style>
-// 
