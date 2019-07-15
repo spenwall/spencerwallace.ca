@@ -7,16 +7,16 @@
       >
         <font-awesome class="text-white" :icon="['fas', 'question']" />
       </div>
-      <div class="relative flex justify-center items-center h-64">
-        <g-image :src="image" alt="project"/>
+      <div class="relative flex justify-center items-center flex-col">
+        <g-image class="h-full" :src="image" alt="project" />
         <transition name="info-transition">
           <div v-if="info" class="bg-white absolute top-0 pr-12 w-full h-full p-3 overflow-hidden">
             <slot></slot>
           </div>
         </transition>
-      </div>
-      <div :class="color" class="min-h-4 text-white p-4 z-10">
-        <div v-html="title"></div>
+        <div :class="color" class="min-h-4 w-full text-white p-4 z-10">
+          <div v-html="title"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -39,12 +39,12 @@ export default {
   },
   data: function() {
     return {
-      info: false,
-    }
+      info: false
+    };
   },
   methods: {
     openInfo() {
-      this.info = !this.info
+      this.info = !this.info;
     }
   }
 };
@@ -53,7 +53,7 @@ export default {
 <style>
 .info-transition-enter-active,
 .info-transition-leave-active {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .info-transition-enter,
