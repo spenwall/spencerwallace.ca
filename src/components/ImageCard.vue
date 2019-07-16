@@ -7,16 +7,16 @@
       >
         <font-awesome class="text-white" :icon="['fas', 'question']" />
       </div>
-      <div class="relative flex justify-center items-center h-64">
-        <g-image :src="image" alt="project"/>
+      <div class="sw-card-height text-md relative flex flex-col justify-center items-center">
+        <g-image class="sw-card-height" :src="image" alt="project" />
         <transition name="info-transition">
-          <div v-if="info" class="bg-white absolute top-0 pr-12 w-full h-full p-3 overflow-hidden">
+          <div v-if="info" class="sw-card-height bg-white absolute top-0 pr-12 w-full h-full p-3 overflow-hidden">
             <slot></slot>
           </div>
         </transition>
-      </div>
-      <div :class="color" class="min-h-4 text-white p-4 z-10">
-        <div v-html="title"></div>
+        <div :class="color" class="h-14 text-white text-sm lg:text-lg w-full p-4 z-10">
+          <div v-html="title"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -39,21 +39,24 @@ export default {
   },
   data: function() {
     return {
-      info: false,
-    }
+      info: false
+    };
   },
   methods: {
     openInfo() {
-      this.info = !this.info
+      this.info = !this.info;
     }
   }
 };
 </script>
 
 <style>
+.sw-card-height {
+  height: 450px;
+}
 .info-transition-enter-active,
 .info-transition-leave-active {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .info-transition-enter,
