@@ -11,43 +11,43 @@
         <div class="w-8">
           <font-awesome class="text-vue-green" :icon="['fas', 'user']"/>
         </div>
-        <a @click="close" href="#" v-scroll-to="'#About'">About</a>
+        <scroll-to href="#About" @click.native="close">About</scroll-to>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'folder-open']"/>
         </div>
-        <a @click="close" href="#" v-scroll-to="'#Projects'">Projects</a>
+        <scroll-to href="#Projects" @click.native="close">Projects</scroll-to>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-yellow text-xl" :icon="['fas', 'briefcase']"/>
         </div>
-        <a @click="close" href="#" v-scroll-to="'#Experience'">Experience</a>
+        <scroll-to href="#Experience" @click.native="close">Experience</scroll-to>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-plum text-xl" :icon="['fas', 'pencil-ruler']"/>
         </div>
-        <a @click="close" href="#" v-scroll-to="'#Tech'">Tech</a>
+        <scroll-to href="#Tech" @click.native="close" >Tech</scroll-to>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-red text-xl" :icon="['fas', 'graduation-cap']"/>
         </div>
-        <a @click="close" href="#" v-scroll-to="'#Education'">Education</a>
+        <scroll-to href="#Education" @click.native="close">Education</scroll-to>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-green text-xl" :icon="['fas', 'address-card']"/>
         </div>
-        <a @click="close" href="#" v-scroll-to="'#Contact'">Contact</a>
+        <scroll-to href="#Contact" @click.native="close">Contact</scroll-to>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
           <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'file-alt']"/>
         </div>
-        <a @click="close" href="#" v-scroll-to="'#Resume'">Resume</a>
+        <scroll-to href="#Resume" @click.native="close">Resume</scroll-to>
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
@@ -64,6 +64,7 @@ export default {
   props: {
     close: {
       type: Function,
+      default: function() {}
     },
   },
 };

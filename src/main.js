@@ -4,24 +4,12 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import '~/assets/styles/style.css'
 import 'prism-themes/themes/prism-atom-dark.css'
-import VueScrollTo from 'vue-scrollto'
+import ScrollTo from '~/components/ScrollTo.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
-  Vue.use(VueScrollTo, {
-    container: "body",
-    duration: 500,
-    easing: "ease",
-    offset: 0,
-    force: true,
-    cancelable: true,
-    onStart: false,
-    onDone: false,
-    onCancel: false,
-    x: false,
-    y: true
-})
+  Vue.component('scroll-to', ScrollTo)
 
   head.link.push({
     rel: 'stylesheet',
