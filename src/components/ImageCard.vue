@@ -7,14 +7,14 @@
       >
         <font-awesome class="text-white" :icon="['fas', 'question']" />
       </div>
-      <div class="relative flex justify-center items-center flex-col">
-        <g-image :src="image" alt="project" />
+      <div class="sw-card-height text-md relative flex flex-col justify-center items-center">
+        <g-image class="sw-card-height" :src="image" alt="project" />
         <transition name="info-transition">
-          <div v-if="info" class="bg-white absolute top-0 pr-12 w-full h-full p-3 overflow-hidden">
+          <div v-if="info" class="sw-card-height bg-white absolute top-0 pr-12 w-full h-full p-3 overflow-hidden">
             <slot></slot>
           </div>
         </transition>
-        <div :class="color" class="min-h-4 w-full text-white p-4 z-10">
+        <div :class="color" class="h-14 text-white text-sm lg:text-lg w-full p-4 z-10">
           <div v-html="title"></div>
         </div>
       </div>
@@ -51,6 +51,9 @@ export default {
 </script>
 
 <style>
+.sw-card-height {
+  height: 450px;
+}
 .info-transition-enter-active,
 .info-transition-leave-active {
   transition: all 0.5s ease-in-out;

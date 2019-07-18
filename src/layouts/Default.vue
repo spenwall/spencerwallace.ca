@@ -2,21 +2,21 @@
   <div class="flex bg-gray-100">
     <div
       @click="toggleMobileMenu"
-      class="z-10 w-full h-10 flex items-center bg-white fixed md:hidden"
+      class="z-30 w-full h-10 flex items-center bg-white fixed md:hidden"
     >
       <font-awesome class="ml-8 text-gray-500 text-xl" :icon="['fas', 'bars']" />
     </div>
     <transition name="slide-right">
-      <slideout v-if="show" class="hidden md:block z-10" />
+      <Menu v-if="show" class="hidden md:block z-30" />
     </transition>
     <transition name="slide-right">
-      <slideout v-if="mobileMenu" :close="closeMobileMenu" mobile="true" class="mt-10 md:hidden z-10" />
+      <Menu v-if="mobileMenu" :close="closeMobileMenu" mobile="true" class="mt-10 md:hidden z-30" />
     </transition>
     <transition name="fade" appear>
       <div
         v-if="mobileMenu"
         @click="closeMobileMenu"
-        class="sw-screen md:hidden w-full h-full bg-black fixed"
+        class="sw-screen md:hidden w-full h-full bg-black fixed z-20"
       ></div>
     </transition>
     <div class="mt-10 md:ml-56 w-full">
@@ -26,11 +26,11 @@
 </template>
 
 <script>
-import slideout from "~/components/Slideout.vue";
+import Menu from "~/components/Menu.vue";
 
 export default {
   components: {
-    slideout
+    Menu
   },
   methods: {
     onLoaded() {
@@ -52,7 +52,7 @@ export default {
   data: function() {
     return {
       show: false,
-      mobileMenu: false
+      mobileMenu: true,
     };
   }
 };
