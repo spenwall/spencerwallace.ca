@@ -4,7 +4,7 @@
       <div class="flex flex-wrap justify-around">
         <ImageCard
           color="bg-vue-blue"
-          class="w-2/3 lg:w-1/3 mb-8"
+          class="w-full sm:w-2/3 lg:w-1/3 mb-8"
           title="Red Flag Deal Alerts"
           image="/images/project-rfd.png"
         >
@@ -21,7 +21,7 @@
         </ImageCard>
         <ImageCard
           color="bg-vue-blue"
-          class="w-2/3 lg:w-1/3 mb-8"
+          class="w-full sm:w-2/3 lg:w-1/3 mb-8"
           title="Gridsome Source Plugin"
           image="/svg/gridsome-logo.svg"
         >

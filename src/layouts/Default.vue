@@ -52,7 +52,7 @@ export default {
   data: function() {
     return {
       show: false,
-      mobileMenu: true,
+      mobileMenu: false,
     };
   }
 };
