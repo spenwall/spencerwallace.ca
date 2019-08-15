@@ -16,4 +16,3 @@ export default function (Vue, { router, head, isClient }) {
     href: 'https://fonts.googleapis.com/css?family=Open+Sans'
   })
 }
-yarn add gridsome-plugin-remark-youtube
