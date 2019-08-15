@@ -48,11 +48,6 @@ export default {
     font-size: 40px;
   }
 
-  .article img {
-    width: 100%;
-    border-radius: 5px;
-  }
-
   .article a {
     color: #4dba87;
     text-decoration: underline;
