@@ -10,7 +10,10 @@
       <div class="sw-card-height text-md relative flex flex-col justify-center items-center">
         <g-image class="sw-card-height" :src="image" alt="project" />
         <transition name="info-transition">
-          <div v-if="info" class="sw-card-height bg-white absolute top-0 pr-12 w-full h-full p-3 overflow-hidden">
+          <div
+            v-if="info"
+            class="sw-card-height bg-white absolute top-0 pr-16 w-full h-full p-3 overflow-hidden"
+          >
             <slot></slot>
           </div>
         </transition>

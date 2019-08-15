@@ -9,9 +9,11 @@
           image="/images/project-rfd.png"
         >
           <div
-            class="border-b pb-2"
+            class="text-sm sm:text-base border-b pb-2"
           >When you need to know the best deals right when they happen this app watches the Candian deal site
-          redflagdeals.com hot deals form and sends notifications of new deals matching keywords.</div>
+          redflagdeals.com hot deals form and sends notifications of new deals matching keywords. <br>
+          <a href="https://rfd.spencerwallace.ca">Red Flag Deal Alerts</a>
+          </div>
           <div class="text-xl mt-2">Built with</div>
           <ul class="list-disc mx-0 my-4 pl-12">
             <li>Laravel</li>
@@ -25,7 +27,7 @@
           title="Gridsome Source Plugin"
           image="/svg/gridsome-logo.svg"
         >
-          <div class="border-b pb-2">
+          <div class="text-sm sm:text-base border-b pb-2">
             A Gridsome source plugin for google sheets. Allows gridsome users to gather data from google sheets to use
             in the static site generator Gridsome.
           </div>

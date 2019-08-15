@@ -15,7 +15,12 @@ module.exports = {
         route: '/blog/:slug',
         plugins: [
           '@gridsome/remark-prismjs'
-        ]
+        ],
+        remark: {
+          plugins: [
+            ['gridsome-plugin-remark-youtube']
+          ]
+        }
       }
     },
     {
