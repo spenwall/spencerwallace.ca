@@ -50,9 +50,7 @@ Then click on create new project. The file folder with a lightning bolt. Then co
 * The trigger will be HTTP trigger.
 * Then give the function a name.
 
-`youtube:https://www.youtube.com/watch?v=kzr1BXoRZnI`
-
-## 5. Test function
+## 4. Test your function
 
 To test the function you simply need to hit F5. This will run the function locally. You can also select Debug from the top menu and hit Start Debugging. It should start node and create an address you can use to test the function. The default template will return `Hello Name` when you pass it the query parameter name.
 
