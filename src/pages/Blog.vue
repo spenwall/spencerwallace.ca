@@ -47,4 +47,5 @@ export default {
 .home-links a {
   margin-right: 1rem;
 }
+
 </style>

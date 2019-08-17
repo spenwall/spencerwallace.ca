@@ -4,6 +4,7 @@
       <h1 class="text-green">{{ $page.blogPost.title }}</h1>
       <span>{{ $page.blogPost.date }}</span>
       <g-image :src="$page.blogPost.image"/>
+      <div v-if="$page.blogPost.credit" class="credit text-gray-500">{{ $page.blogPost.credit }}</div>
       <div class="content" v-html="$page.blogPost.content" />
     </div>
   </Layout>
@@ -31,6 +32,7 @@ export default {
       date (format: "D MMMM, YYYY")
       content
       image
+      credit
     }
   }
 </page-query>
@@ -64,6 +66,11 @@ export default {
 
   .article ol, .article ul {
     list-style-position: outside;
+  }
+
+  .article ol {
+    list-style-type: decimal;
+    padding-left: 20px;
   }
 
   .article ul {
