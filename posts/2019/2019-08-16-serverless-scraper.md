@@ -36,13 +36,14 @@ eg. `https://the-function-address.com/?url=https://example-url.com`
 
 When we use ? after the initial url it means we are going to pass in some parameters. In this case we are using the parameter url with the value https://example-url.com. In our code we can get this value using `req.query.url`. This will give us the value that we pass in.
 
+index.js
 ```js
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
     if (req.query.url {
         context.res = {
-            
+            //Stuff goes here
         };
     }
     else {
@@ -53,6 +54,57 @@ module.exports = async function (context, req) {
     }
 };
 ```
+
+Cheerio is an open source packages that can be used to scrape information from an html page. It uses a jquery syntax for querying. So if you are familiar with that this will be easy. We will start by adding the package.
+
+`npm install cheerio`
+
+To get the html from the site we will use request-promise. This is an easy to use promise base html fetcher.
+
+`npm install request-promise`
+
+Then we will add these to our index file.
+
+index.js
+```js
+//Here are the imports for the packages we are using
+const cheerio = require("cheerio")
+const request = require("request-promise")
+
+module.exports = async function (context, req) {
+    context.log('JavaScript HTTP trigger function processed a request.');
+
+    if (req.query.url {
+        context.res = {
+            //These are the options for the request
+            let options = {
+                uri: req.query.url,
+                transform: body => {
+                    //After the request comes back we pass it through cheerio
+                    return cheerio.load(body)
+                }
+            }
+
+            // This is where we make the request to fetch the page
+            // The $ is a cheerio object that we will use to search for 
+            // elements
+            const $ = await request(options);
+        };
+    }
+    else {
+        context.res = {
+            status: 400,
+            body: "Please pass in a URL you would like to scrape"
+        };
+    }
+};
+```
+
+Now we can use the $ to find elements in a page. This is done with a jquery like syntax. In our case we are going to find all of the regular ads on a page. They are identified with the class 'regular-ads'. So to find all the elements we use the following.
+
+`const ads = $('.regular-ads')`
+
+
 
 ## Using Airtable
 
