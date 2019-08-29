@@ -27,6 +27,8 @@ We will be doing the following in this article
 1. [Set up web scraper](#setup-scraper-using-cheerio)
 2. [Store ad Id in Airtable](#using-airtable)
 3. [Send information with Mailgun](#send-emails-with-mailgun)
+4. [View the complete function](#complete-function)
+5. [Deploy the function](#deploy-function)
 
 ## Setup Scraper using Cheerio
 
@@ -66,7 +68,7 @@ To get the html from the site we will use request-promise. This is an easy to us
 Then we will add these to our index file.
 
 index.js
-```js
+```javascript
 const cheerio = require("cheerio")
 const request = require("request-promise")
 
@@ -103,7 +105,7 @@ module.exports = async function (context, req) {
 
 Now we can use the $ to find elements in a page. This is done with a jquery like syntax. In our case we are going to find all of the regular ads on a page. They are identified with the class 'regular-ads'. So to find all the elements we use the following.
 
-```js
+```javascript
 const ads = $('.regular-ad')
 ```
 
@@ -113,7 +115,7 @@ eg. `ad[0].text()` will return all of the text in the first ad.
 
 We are going to gather some information for each of the ads scraped from the page. To do this we will make an array and then loop through the ads and gather the information for each ad.
 
-```js
+```javascript
 let newAds = [];
 ads.each((i, ad) => {
     newAds.push(
@@ -132,19 +134,19 @@ In this example we don't want to get all of the ads every time we scrape the pag
 
 For our function we will need to import the Airtable apk.
 
-```js
+```javascript
 npm install airtable
 ```
 
 Then we can add it to the top of our function.
 
-```js
+```javascript
 const Airtable = require('airtable')
 ```
 
 Now we will make a function to get the last Id from the table and if it doesn't have a record we will create one.
 
-```js
+```javascript
 LastId = async () => {
     const apiKey = {your-api-key-from-airtable}
     let base = new Airtable({ apiKey }).base("{base-id}")
@@ -169,7 +171,7 @@ LastId = async () => {
 
 We will now create a function to add a new row if one was not found. This will set the base for adding a new id when we go through the ids.
 
-```js
+```javascript
 createNewRow = (url) => {
     const apiKey = {your-api-key}
     let base = new Airtable({ apikey }).base("{base-id}")
@@ -184,7 +186,7 @@ createNewRow = (url) => {
 
 This is our total function so far.
 
-```js
+```javascript
 const Cheerio = require("cheerio")
 const Request = require("request-promise")
 const Airtable = require("airtable")
@@ -275,7 +277,7 @@ First add the Mailgun dependency
 
 Then add it to our imports at the top.
 
-```js
+```javascript
 const Cheerio = require("cheerio")
 const Request = require("request-promise")
 const Airtable = require("airtable")
@@ -284,7 +286,7 @@ const Mailgun = require("mailgun-js")
 
 The function to send emails will look something like this. We get the api key and domain for Mailgun from the environment variables. Then we will send the email through Mailgun.
 
-```js
+```javascript
 const sendNotifications = (ad, email) => {
     const apiKey = process.env['MAILGUN_API_KEY']
     const domain = process.env['MAILGUN_DOMAIN']
@@ -309,7 +311,7 @@ const sendNotifications = (ad, email) => {
 
 We will also need to add a second query parameter for our email address that we can pass in. At the top of our index function we will get the query parameter for email.
 
-```js
+```javascript
 const email = req.query.email
 ```
 
@@ -497,3 +499,6 @@ To get the address of the function click on functions and your function will sho
 
 You can then use that url to trigger your function that you have deployed to the Azure cloud. In my case I setup a cron job that runs every 15 mins.
 
+## Conclusion
+
+Now that you know how to setup a serverless function the possibilities are endless. You can do all kinds of things that now don't require a server.
