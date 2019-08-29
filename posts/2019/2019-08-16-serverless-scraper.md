@@ -315,7 +315,7 @@ const email = req.query.email
 
 ## Complete Function
 
-Here is the full function with everything. It isn't the most elegant function and can be refactored into separate files but for todays purposes we are going to keep it simple.
+Here is the full function with everything. It isn't the most clean function and can be refactored into separate files but for todays purposes we are going to keep it simple and all in one.
 
 ```js
 const Cheerio = require("cheerio")
@@ -448,7 +448,7 @@ const sendNotifications = (ad, email) => {
     const domain = process.env['MAILGUN_DOMAIN'];
 
     const mail = Mailgun({apiKey, domain})
-    const data = {
+    const data = { 
         from: 'Kijiji Alerts <alert@rfd.spencerwallace.ca>',
         to: email,
         subject: 'New Kijiji ad',
@@ -466,4 +466,34 @@ const sendNotifications = (ad, email) => {
 }
 ```
 
+You can test the function by hitting F5 and running the function locally. Once the function is running it will give you the address to hit. Then you can either use an api testing program like postman or just use a browser. You will need to pass the two query parameters which are the url for the page we are scraping and the email address. The url would look something like this. 
+
+`http://localhost:7071/api/test-scraper?url=https://www.kijiji.ca/b-free-stuff/medicine-hat/c17220001l1700231&email=test@test.com`
+
+This will grab all the adds for the page, log the latest ad id in airtable, send all of the ads to the email and then will return json of all the new ads. The second time it runs it shouldn't show any ads because it will only be showing ads that are newer than the ad id that we stored in airtable.
+
 ## Deploy Function
+
+Now that we have the function running we can deploy it to the cloud. To do this we can use our vscode extension. Just click the deploy button at the top. The one with the arrow pointing up to a line.
+
+![Deploy](../images/azure-deploy.png)
+
+It will then ask you to input some settings.
+
+* Name of the function
+* Data center to deploy to (Just pick something close to your location)
+
+After it is deployed it will show up under your account. In my case it is under Free Trial account.
+
+![Deployed](../images/azure-deployed.png)
+
+You will then need to add your environment variables. This is done by clicking the dropdown on the function and right clicking on Application Settings. You can either add the environment variables that you have locally by selecting **upload local settings** or adding them one by one by selecting **add new setting**. 
+
+![Local Settings](../images/azure-variables.png)
+
+To get the address of the function click on functions and your function will show up. Then right click on the function and it will give you the option to **copy function url**. 
+
+![Function url](../images/function-url.png)
+
+You can then use that url to trigger your function that you have deployed to the Azure cloud. In my case I setup a cron job that runs every 15 mins.
+
