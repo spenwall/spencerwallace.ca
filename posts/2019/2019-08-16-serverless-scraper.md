@@ -527,3 +527,5 @@ You can then use that url to trigger your function that you have deployed to the
 ## Conclusion
 
 Now that you know how to setup a serverless function the possibilities are endless. You can do all kinds of things that now don't require a server.
+
+You can view the [source code](https://github.com/spenwall/scraper-example) for this project and make a pull request if you see something that needs fixing.
