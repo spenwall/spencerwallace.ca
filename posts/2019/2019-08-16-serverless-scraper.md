@@ -1,7 +1,7 @@
 ---
 title: Serverless Web Scraper Using Azure Functions
 date: 2019-08-16 14:00:00
-description: This is an example of how to setup a web scraper using an Azure function.
+description: This is an example of how to setup a web scraper using an Azure function. In this example we use classified site kijiji.com. To search for new ads in a certain category page and then send any new ads to a given email with mailgun.
 image: '../images/hunter-haley-s8OO2-t-HmQ-unsplash.jpg'
 credit: Photo by Hunter Haley on Unsplash
 slug: serverless-scraper
@@ -148,7 +148,7 @@ Now we will make a function to get the last Id from the table and if it doesn't 
 
 ```javascript
 LastId = async () => {
-    const apiKey = {your-api-key-from-airtable}
+    const apiKey = process.env[AIRTABLE_API_KEY]
     let base = new Airtable({ apiKey }).base("{base-id}")
 
     const select = `({url} = "${url}")`;
@@ -173,7 +173,7 @@ We will now create a function to add a new row if one was not found. This will s
 
 ```javascript
 createNewRow = (url) => {
-    const apiKey = {your-api-key}
+    const apiKey = process.env[AIRTABLE_API_KEY]
     let base = new Airtable({ apikey }).base("{base-id}")
 
     base("test-scraper").create(
@@ -183,6 +183,23 @@ createNewRow = (url) => {
     )
 }
 ```
+
+Side note about environment variables. For azure functions you can store local variables in local.settings.json.
+
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AIRTABLE_API_KEY": "api-key",
+    "MAILGUN_API_KEY": "mailgun-key",
+    "MAILGUN_DOMAIN": "mailgun-domain"
+  }
+}
+```
+
+Then you can access these with the process.env[VARIABLE_NAME]
 
 This is our total function so far.
 
@@ -236,7 +253,7 @@ module.exports = async function (context, req) {
 }
 
 const LastId = async(url) => {
-    const apiKey = 'api'
+    const apiKey = process.env[AIRTABLE_API_KEY]
     let base = new Airtable({ apiKey }).base("{base-id}")
 
     const select = 'AND(url = "' + url + '")'
@@ -256,7 +273,7 @@ const LastId = async(url) => {
 }
 
 const createNewRow = (url) => {
-    const apiKey = 'api'
+    const apiKey = process.env[AIRTABLE_API_KEY]
     let base = new Airtable({ apiKey }).base("{base-id}")
 
     base("{table-name}").create(
@@ -271,7 +288,7 @@ const createNewRow = (url) => {
 
 When new ads are found we will send those ads to a given email address. To do this we will use a service called Mailgun, which is an api email delivery. You will need to setup an account and get the api key to use this api. You will also need to setup a domain to send from. This can be a sandbox account.
 
-First add the Mailgun dependency
+First add the Mailgun dependency to our project
 
 `npm install mailgun-js`
 
@@ -308,6 +325,8 @@ const sendNotifications = (ad, email) => {
     })
 }
 ```
+
+When we send this data to mailgun it will be using the template that we specify. In this case it is **kijiji-ad**. This is something that you will have to setup in mailgun. The template will then have access to the variables that we pass in. **title, link, price, image** which we can use to format an attractive email.
 
 We will also need to add a second query parameter for our email address that we can pass in. At the top of our index function we will get the query parameter for email.
 
@@ -387,18 +406,20 @@ module.exports = async function (context, req) {
     else {
         context.res = {
             status: 400,
-            body: "Please pass in a URL you would like to scrape"
+            body: "You are missing an url from kijiji or an email in your request"
         }
     }
 }
 
 const LastId = async (url) => {
     const apiKey = process.evn["AIRTABLE_API_KEY"]
-    const base = new Airtable({ apiKey }).base("app6oORsYg8BZk2GE")
+    //make sure to update the base code
+    const base = new Airtable({ apiKey }).base("{base-code-from-airtable}")
 
     const select = `({url} = "${url}")`;
 
-    let row = await base("test-scraper")
+    //You will need to replace the table name
+    let row = await base("{table-name}")
         .select({
             view: "Grid view",
             filterByFormula: select,
@@ -415,7 +436,8 @@ const LastId = async (url) => {
 
 const createNewRow = (url) => {
     const apiKey = process.evn["AIRTABLE_API_KEY"]
-    const base = new Airtable({ apiKey }).base("app6oORsYg8BZk2GE")
+    //Replace base code
+    const base = new Airtable({ apiKey }).base("{base-code-from-airtable")
 
     base("test-scraper").create(
         {
@@ -451,7 +473,8 @@ const sendNotifications = (ad, email) => {
 
     const mail = Mailgun({apiKey, domain})
     const data = { 
-        from: 'Kijiji Alerts <alert@rfd.spencerwallace.ca>',
+        //change the email address to what you would like
+        from: 'Kijiji Alerts <test@test.com>',
         to: email,
         subject: 'New Kijiji ad',
         template: 'kijiji-ad',
@@ -470,7 +493,9 @@ const sendNotifications = (ad, email) => {
 
 You can test the function by hitting F5 and running the function locally. Once the function is running it will give you the address to hit. Then you can either use an api testing program like postman or just use a browser. You will need to pass the two query parameters which are the url for the page we are scraping and the email address. The url would look something like this. 
 
-`http://localhost:7071/api/test-scraper?url=https://www.kijiji.ca/b-free-stuff/medicine-hat/c17220001l1700231&email=test@test.com`
+```javascript
+http://localhost:7071/api/test-scraper?url=https://www.kijiji.ca/b-free-stuff/medicine-hat/c17220001l1700231&email=test@test.com
+```
 
 This will grab all the adds for the page, log the latest ad id in airtable, send all of the ads to the email and then will return json of all the new ads. The second time it runs it shouldn't show any ads because it will only be showing ads that are newer than the ad id that we stored in airtable.
 
