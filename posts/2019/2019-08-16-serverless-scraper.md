@@ -1,7 +1,7 @@
 ---
 title: Serverless Web Scraper Using Azure Functions
 date: 2019-08-16 14:00:00
-description: This is an example of how to setup a web scraper using an Azure function. In this example we use classified site kijiji.com. To search for new ads in a certain category page and then send any new ads to a given email with mailgun.
+description: This is an example of how to setup a web scraper using an Azure function. In this example we use classified site kijiji.com to search for new ads in a certain category page and then send any new ads to a given email with mailgun.
 image: '../images/hunter-haley-s8OO2-t-HmQ-unsplash.jpg'
 credit: Photo by Hunter Haley on Unsplash
 slug: serverless-scraper
