@@ -7,12 +7,14 @@
       >
         <font-awesome class="text-white" :icon="['fas', 'question']" />
       </div>
-      <div class="sw-card-height text-md relative flex flex-col justify-center items-center">
-        <g-image class="sw-card-height" :src="image" alt="project" />
+      <div class="sw-card-height text-md relative flex flex-col justify-between items-center">
+        <div class="flex flex-col justify-center flex-grow">
+          <g-image :src="image" alt="project" />
+        </div>
         <transition name="info-transition">
           <div
             v-if="info"
-            class="sw-card-height bg-white absolute top-0 pr-16 w-full h-full p-3 overflow-hidden"
+            class="bg-white absolute top-0 pr-16 w-full h-full p-3 overflow-hidden"
           >
             <slot></slot>
           </div>

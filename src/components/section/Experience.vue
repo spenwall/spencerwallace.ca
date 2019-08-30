@@ -3,11 +3,11 @@
     <Section title="Experience" color="bg-yellow">
       <div class="w-full flex justify-center">
         <div class="flex justify-center sm:w-4/5 flex-wrap">
-          <Card class="w-full" title="Sr. Software Engineer: Weddingstar June 2016 - Present">
+          <Card class="w-full" title="Sr. Software Engineer: Weddingstar June 2016 - September 2019">
             <ul class="list-disc mx-0 my-4 pl-12">
               <li>
                 Responsible for site architecture, and dev ops for one of the largest worldwide online wedding retailers
-                with 10,000 - 20,000 daily visitors
+                with 20,000 daily visitors
               </li>
               <li>
                 Provide beginner to mid level training to 7 developers on different

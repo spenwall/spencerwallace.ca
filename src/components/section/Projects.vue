@@ -5,6 +5,24 @@
         <ImageCard
           color="bg-vue-blue"
           class="w-full sm:w-2/3 lg:w-1/3 mb-8"
+          title="Weddingstar"
+          image="/images/weddingstar.png"
+        >
+          <div class="text-sm sm:text-base border-b pb-2" >
+          <a href="https://weddingstar.com">Weddingstar</a>
+          </div>
+          Principle architect for the site with 20,000 visitors per day.
+          <div class="text-xl mt-2">Built with</div>
+          <ul class="list-disc mx-0 my-4 pl-12">
+            <li>PHP Zendframework</li>
+            <li>Javascript (JQuery)</li>
+            <li>SASS</li>
+            <li>Bootstrap</li>
+          </ul>
+        </ImageCard>
+        <ImageCard
+          color="bg-vue-blue"
+          class="w-full sm:w-2/3 lg:w-1/3 mb-8 mr-2"
           title="Red Flag Deal Alerts"
           image="/images/project-rfd.png"
         >
