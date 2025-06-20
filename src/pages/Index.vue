@@ -27,6 +27,7 @@
       <Education/>
       <Contact/>
       <Resume/>
+      <Links/>
     </div>
   </Layout>
 </template>
@@ -61,6 +62,7 @@ import Tech from "~/components/section/Tech.vue";
 import Education from "~/components/section/Education.vue";
 import Contact from "~/components/section/Contact.vue";
 import Resume from "~/components/section/Resume.vue";
+import Links from "~/components/section/Links.vue";
 
 export default {
   components: {
@@ -71,7 +73,8 @@ export default {
     Tech,
     Education,
     Contact,
-    Resume
+    Resume,
+    Links
   },
   methods: {
     onLoaded() {

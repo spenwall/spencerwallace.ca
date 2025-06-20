@@ -51,6 +51,12 @@
       </li>
       <li class="ml-10 mb-8 flex items-center">
         <div class="w-8">
+          <font-awesome class="text-vue-blue text-xl" :icon="['fas', 'file-alt']"/>
+        </div>
+        <scroll-to href="#Links" @click.native="close">Links</scroll-to>
+      </li>
+      <li class="ml-10 mb-8 flex items-center">
+        <div class="w-8">
           <font-awesome class="text-plum text-xl" :icon="['fas', 'blog']" />
         </div>
         <g-link to="/blog">Blog</g-link>
